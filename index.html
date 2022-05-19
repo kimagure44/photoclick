@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Take a photo</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="container-video">
+      <div class="notice">CHEESE</div>
+      <video autoplay></video>
+      <i
+        class="fa-solid fa-camera icon-photo cursor-pointer"
+        title="Take a photo"
+      ></i>
+      <div class="container-auto">
+        <div class="input-range">
+          <input
+            type="range"
+            min="3000"
+            max="30000"
+            step="500"
+            title="Time between photos"
+            id="timeRange"
+          /><span id="time"></span>
+        </div>
+        <div class="automatic-controls">
+          <i
+            class="fa-solid fa-play cursor-pointer"
+            title="Start automatic photography"
+            id="startAutomatic"
+          ></i>
+          <i
+            class="fa-solid fa-stop cursor-pointer disabled"
+            title="Stop automatic photography"
+            id="stopAutomatic"
+          ></i>
+          <i
+            class="fa-solid fa-download cursor-pointer disabled"
+            title="Download selected photo"
+            id="downloadPhoto"
+          ></i>
+        </div>
+      </div>
+      <div class="session">
+        <input type="text" placeholder="Photo session name" id="sessionName" />
+      </div>
+    </div>
+    <div class="container-photo"></div>
+    <script src="./index.js"></script>
+  </body>
+</html>
